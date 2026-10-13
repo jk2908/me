@@ -1,0 +1,72 @@
+{
+	"useTabs": true,
+	"tabWidth": 2,
+	"printWidth": 90,
+	"singleQuote": true,
+	"jsxSingleQuote": false,
+	"quoteProps": "as-needed",
+	"trailingComma": "all",
+	"semi": false,
+	"arrowParens": "avoid",
+	"bracketSameLine": true,
+	"bracketSpacing": true,
+	"singleAttributePerLine": false,
+	"sortImports": {
+		"newlinesBetween": false,
+		"customGroups": [
+			{
+				"groupName": "vite",
+				"elementNamePattern": ["vite"]
+			},
+			{
+				"groupName": "react",
+				"elementNamePattern": ["react", "react/**", "react-dom", "react-dom/**"]
+			},
+			{
+				"groupName": "solas-packages",
+				"elementNamePattern": ["@jk2908/solas", "@jk2908/solas/**", ".solas", ".solas/**"]
+			},
+			{
+				"groupName": "types",
+				"elementNamePattern": ["**/types", "**/types/**"]
+			},
+			{
+				"groupName": "solas",
+				"elementNamePattern": ["**/solas", "**/solas/**"]
+			},
+			{
+				"groupName": "utils",
+				"elementNamePattern": ["**/utils", "**/utils/**"]
+			},
+			{
+				"groupName": "internal",
+				"elementNamePattern": ["**/internal", "**/internal/**"]
+			}
+		],
+		"groups": [
+			"type-import",
+			{ "newlinesBetween": true },
+			"value-builtin",
+			{ "newlinesBetween": true },
+			"vite",
+			{ "newlinesBetween": true },
+			"react",
+			{ "newlinesBetween": true },
+			"solas-packages",
+			"value-external",
+			{ "newlinesBetween": true },
+			"types",
+			{ "newlinesBetween": true },
+			"solas",
+			{ "newlinesBetween": true },
+			"utils",
+			{ "newlinesBetween": true },
+			"internal",
+			{ "newlinesBetween": true },
+			["type-parent", "type-sibling", "type-index"],
+			["value-parent", "value-sibling", "value-index"],
+			"unknown"
+		]
+	},
+	"ignorePatterns": ["**/dist/**", "**/.solas/**", "**/node_modules/**"]
+}
