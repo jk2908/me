@@ -19,6 +19,10 @@ export default defineConfig(() => {
 				prerender: 'ppr',
 				precompress: false,
 				adapter: cloudflare(),
+				sitemap: {
+					// `__`-prefixed posts are private and are not routable
+					routes: routes => routes.filter(route => !route.includes('__')),
+				},
 				metadata: {
 					title: '%s - Jerome Kenway',
 				},
