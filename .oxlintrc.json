@@ -10,7 +10,6 @@
 		"exhaustive-deps": "warn",
 		"no-shadow": "off",
 		"react-in-jsx-scope": "off",
-		"jsx-uses-react": "off",
 		"jsx-key": "error",
 		"jsx-no-constructed-context-values": "warn",
 		"no-array-index-key": "warn",

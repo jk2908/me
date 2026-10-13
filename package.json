@@ -1,36 +1,36 @@
 {
-  "name": "me",
-  "module": "index.ts",
-  "type": "module",
-  "private": true,
-  "scripts": {
-    "dev": "cf dev",
-    "build": "node scripts/deploy.js && cf build",
-    "preview": "vite preview",
-    "deploy": "bun run build && cf deploy --prebuilt --mode production"
-  },
-  "devDependencies": {
-    "@cloudflare/vite-plugin": "2.0.0-beta.sha-52b0dc0e9",
-    "@types/bun": "latest",
-    "@types/react": "^19.2.15",
-    "@types/react-dom": "^19.2.3",
-    "@typescript/native-preview": "^7.0.0-dev.20260421.2",
-    "@vitejs/plugin-react": "^6.0.1",
-    "cf": "1.0.0-beta.12",
-    "oxfmt": "^0.46.0",
-    "oxlint": "^1.61.0",
-    "vite": "^8.0.9"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  },
-  "dependencies": {
-    "@jk2908/cxx": "^0.3.7",
-    "@jk2908/mdsrc": "^0.8.1",
-    "@jk2908/solas": "0.8.1",
-    "clsx": "^2.1.1",
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6",
-    "react-server-dom-webpack": "^19.2.6"
-  }
+	"name": "me",
+	"private": true,
+	"type": "module",
+	"module": "index.ts",
+	"scripts": {
+		"dev": "cf dev",
+		"build": "node scripts/deploy.js && cf build",
+		"preview": "vite preview",
+		"deploy": "bun run build && cf deploy --prebuilt --mode production"
+	},
+	"dependencies": {
+		"@jk2908/cxx": "^0.3.7",
+		"@jk2908/mdsrc": "^0.8.1",
+		"@jk2908/solas": "0.8.1",
+		"clsx": "^2.1.1",
+		"react": "^19.2.6",
+		"react-dom": "^19.2.6",
+		"react-server-dom-webpack": "^19.2.6"
+	},
+	"devDependencies": {
+		"@cloudflare/vite-plugin": "2.0.0-beta.sha-52b0dc0e9",
+		"@types/bun": "latest",
+		"@types/react": "^19.2.15",
+		"@types/react-dom": "^19.2.3",
+		"@typescript/native-preview": "^7.0.0-dev.20260421.2",
+		"@vitejs/plugin-react": "^6.0.1",
+		"cf": "1.0.0-beta.12",
+		"oxfmt": "^0.46.0",
+		"oxlint": "^1.61.0",
+		"vite": "^8.0.9"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	}
 }

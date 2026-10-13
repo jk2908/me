@@ -53,7 +53,7 @@ export default function Page({ params }: Route.Props<Solas.Routes['/writing/:slu
 		const parts = new Intl.DateTimeFormat('en-GB').formatToParts(date)
 
 		return parts.map(p => (p.type === 'literal' ? '.' : p.value)).join('')
-	}, [])
+	}, [post.publishedAt])
 
 	return (
 		<>

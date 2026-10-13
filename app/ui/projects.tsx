@@ -80,6 +80,13 @@ export function Projects({ className, ...rest }: React.ComponentPropsWithRef<'ul
 								if (!p.repo) return
 								window.open(p.repo, '_blank', 'noopener,noreferrer')
 							}}
+							onKeyDown={event => {
+								if (event.key !== 'Enter' && event.key !== ' ') return
+								if (!p.repo) return
+
+								event.preventDefault()
+								window.open(p.repo, '_blank', 'noopener,noreferrer')
+							}}
 							className={styles.item}>
 							<div className={styles.inner}>
 								<div className={styles.head}>
