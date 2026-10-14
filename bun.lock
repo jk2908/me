@@ -7,7 +7,7 @@
       "dependencies": {
         "@jk2908/cxx": "^0.3.7",
         "@jk2908/mdsrc": "0.8.3",
-        "@jk2908/solas": "^0.8.3",
+        "@jk2908/solas": "^0.9.0",
         "clsx": "^2.1.1",
         "react": "^19.2.6",
         "react-dom": "^19.2.6",
@@ -129,7 +129,7 @@
 
     "@jk2908/mdsrc": ["@jk2908/mdsrc@0.8.3", "", { "dependencies": { "satteri": "^0.8.1", "smol-toml": "^1.6.1", "yaml": "^2.9.0" }, "peerDependencies": { "vite": "^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0" } }, "sha512-5WaOn5yVwc/x1gAo/9YgEuCup7T8cCGyUlr7TsOMa89FtGFmPqWnJxEPl7paB0L6MGGhVl0aVGedeWE9xa2Zyw=="],
 
-    "@jk2908/solas": ["@jk2908/solas@0.8.3", "", { "dependencies": { "@vitejs/plugin-rsc": "^0.5.36", "oxc-parser": "^0.134.0", "oxfmt": "^0.35.0", "path-to-regexp": "^8.3.0" }, "peerDependencies": { "@cloudflare/vite-plugin": "^2.0.0-beta.0", "@types/react": "^19.2.14", "@types/react-dom": "^19.2.3", "react": "^19.2.4", "react-dom": "^19.2.4", "react-server-dom-webpack": "^19.2.4", "vite": "^8.0.0" }, "optionalPeers": ["@cloudflare/vite-plugin", "react-server-dom-webpack"] }, "sha512-jmhBSIdXKQ418UbO50LspNv057scg7utxa3q7wkTIgqOayJR4qPItphOoLzpugwAXi6zXq9Zy3r7yCSDfoQ+kA=="],
+    "@jk2908/solas": ["@jk2908/solas@0.9.0", "", { "dependencies": { "@vitejs/plugin-rsc": "^0.5.36", "oxc-parser": "^0.134.0", "oxfmt": "^0.35.0", "path-to-regexp": "^8.3.0" }, "peerDependencies": { "@cloudflare/vite-plugin": "^2.0.0-beta.0", "@types/react": "^19.2.14", "@types/react-dom": "^19.2.3", "react": "^19.2.4", "react-dom": "^19.2.4", "react-server-dom-webpack": "^19.2.4", "vite": "^8.0.0" }, "optionalPeers": ["@cloudflare/vite-plugin", "react-server-dom-webpack"] }, "sha512-rp94HchyhAi4IpNWebEwqsbxTamyLNBZvhoEPq28dMpTIzG9msFTI6Ee4tbG+Icp5LTyNvcvqTTTcGpsc5vvWQ=="],
 
     "@jridgewell/gen-mapping": ["@jridgewell/gen-mapping@0.3.13", "", { "dependencies": { "@jridgewell/sourcemap-codec": "^1.5.0", "@jridgewell/trace-mapping": "^0.3.24" } }, "sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA=="],
 
