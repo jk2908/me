@@ -99,7 +99,7 @@ export function Projects({ className, ...rest }: React.ComponentPropsWithRef<'ul
 								</div>
 
 								{p.html && <div dangerouslySetInnerHTML={{ __html: p.html }} />}
-								{p.Component && <p.Component />}
+								{/*{p.Component && <p.Component />}*/}
 							</div>
 						</li>
 					))}

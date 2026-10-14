@@ -1,9 +1,10 @@
+import type { Route } from '@jk2908/solas'
 import { Link } from '@jk2908/solas/router'
 import { allPosts } from '@jk2908/mdsrc'
 
 export const metadata = {
 	title: 'Writing',
-}
+} satisfies Route.Metadata
 
 const posts = allPosts
 	?.toSorted((a, b) => {

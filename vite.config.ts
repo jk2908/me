@@ -3,7 +3,7 @@ import { fileURLToPath } from 'node:url'
 
 import { defineConfig } from 'vite'
 
-import solas, { type Origin } from '@jk2908/solas'
+import solas from '@jk2908/solas'
 import { cloudflare } from '@jk2908/solas/cloudflare/vite'
 import cxx from '@jk2908/cxx/vite'
 import mdsrc from '@jk2908/mdsrc'
@@ -15,7 +15,7 @@ export default defineConfig(() => {
 	return {
 		plugins: [
 			solas({
-				url: (process.env.SITE_URL ?? 'http://localhost:8787') as Origin,
+				url: process.env.SITE_URL ?? 'http://localhost:8787',
 				prerender: 'ppr',
 				precompress: false,
 				adapter: cloudflare(),
