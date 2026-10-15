@@ -6,8 +6,9 @@ export const metadata = {
 	title: 'Writing',
 } satisfies Route.Metadata
 
-const posts = allPosts
-	?.toSorted((a, b) => {
+const posts = (allPosts ?? [])
+	.filter(p => p)
+	.toSorted((a, b) => {
 		const dateA = new Date(a.publishedAt).getTime()
 		const dateB = new Date(b.publishedAt).getTime()
 
