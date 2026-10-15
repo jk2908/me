@@ -40,7 +40,7 @@ export const metadata: Route.Metadata<Solas.Routes['/writing/:slug']> = ({ param
 	}
 }
 
-export const params: Route.StaticParams<Solas.Routes['/writing/:slug']> = () =>
+export const staticParams: Route.StaticParams<Solas.Routes['/writing/:slug']> = () =>
 	allPosts?.map(p => ({ slug: p.__mdsrc.slug })) ?? []
 
 export default function Page({ params }: Route.Props<Solas.Routes['/writing/:slug']>) {

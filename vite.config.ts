@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
 
 import solas from '@jk2908/solas'
-import { cloudflare } from '@jk2908/solas/cloudflare/vite'
+import cloudflare from '@jk2908/solas/adapters/cloudflare'
 import cxx from '@jk2908/cxx/vite'
 import mdsrc from '@jk2908/mdsrc'
 import react from '@vitejs/plugin-react'
