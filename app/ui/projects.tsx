@@ -108,7 +108,7 @@ export function Projects({ className, ...rest }: React.ComponentPropsWithRef<'ul
 				<p>Nothing is recent.</p>
 			)}
 
-			<style href={href} precedence="medium">
+			<style href={href} precedence="default">
 				{css}
 			</style>
 		</>

@@ -17,7 +17,7 @@ export function Footer({ className, ...rest }: React.ComponentPropsWithRef<'foot
 				Last updated: {deploy.updatedAt}
 			</footer>
 
-			<style href={href} precedence="medium">
+			<style href={href} precedence="default">
 				{css}
 			</style>
 		</>

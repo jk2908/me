@@ -61,7 +61,7 @@ export function Aside({ className, ...rest }: React.ComponentPropsWithRef<'aside
 				</nav>
 			</aside>
 
-			<style href={href} precedence="medium">
+			<style href={href} precedence="default">
 				{css}
 			</style>
 		</>

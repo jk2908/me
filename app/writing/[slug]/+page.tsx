@@ -80,7 +80,7 @@ export default function Page({ params }: Route.Props<Solas.Routes['/writing/:slu
 				/>
 			)}
 
-			<style href={href} precedence="medium">
+			<style href={href} precedence="default">
 				{css}
 			</style>
 		</>
