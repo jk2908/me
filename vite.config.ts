@@ -11,7 +11,7 @@ import react from '@vitejs/plugin-react'
 
 const resolver = (p: string) => resolve(dirname(fileURLToPath(import.meta.url)), p)
 
-export default defineConfig(() => {
+export default defineConfig(({ mode }) => {
 	return {
 		plugins: [
 			solas({
@@ -19,6 +19,22 @@ export default defineConfig(() => {
 				prerender: 'ppr',
 				precompress: false,
 				adapter: cloudflare(),
+				...(mode === 'production'
+					? {
+							csp: {
+								directives: {
+									'default-src': ['self'],
+									'script-src': ['self'],
+									'style-src': ['self'],
+									'img-src': ['self', 'data:'],
+									'font-src': ['self'],
+									'object-src': ['none'],
+									'base-uri': ['self'],
+									'frame-ancestors': ['none'],
+								},
+							},
+						}
+					: {}),
 				sitemap: {
 					// `__`-prefixed posts are private and are not routable
 					routes: routes => routes.filter(route => !route.includes('__')),

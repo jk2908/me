@@ -54,7 +54,7 @@ export function Aside({ className, ...rest }: React.ComponentPropsWithRef<'aside
 			<aside className={clsx(styles.aside, className)} {...rest}>
 				<nav className={styles.nav}>
 					{links.map(l => (
-						<Link key={l.href} href={l.href}>
+						<Link key={l.href} href={l.href} prefetch="auto">
 							{l.name}
 						</Link>
 					))}
