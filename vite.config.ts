@@ -11,7 +11,7 @@ import react from '@vitejs/plugin-react'
 
 const resolver = (p: string) => resolve(dirname(fileURLToPath(import.meta.url)), p)
 
-export default defineConfig(() => {
+export default defineConfig(({ mode }) => {
 	return {
 		plugins: [
 			solas({
@@ -19,12 +19,35 @@ export default defineConfig(() => {
 				prerender: 'ppr',
 				precompress: false,
 				adapter: cloudflare(),
+				...(mode === 'production'
+					? {
+							csp: {
+								directives: {
+									'default-src': ['self'],
+									'script-src': ['self'],
+									'style-src': ['self'],
+									'img-src': ['self', 'data:'],
+									'font-src': ['self'],
+									'object-src': ['none'],
+									'base-uri': ['self'],
+									'frame-ancestors': ['none'],
+								},
+							},
+						}
+					: {}),
+
 				sitemap: {
 					// `__`-prefixed posts are private and are not routable
 					routes: routes => routes.filter(route => !route.includes('__')),
 				},
 				metadata: {
 					title: '%s - Jerome Kenway',
+					link: [
+						{
+							rel: 'icon',
+							href: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐲</text></svg>',
+						},
+					],
 				},
 			}),
 			react(),

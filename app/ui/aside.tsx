@@ -2,7 +2,7 @@ import { Link } from '@jk2908/solas/router'
 import { type AsideClasses, cxx } from '@jk2908/cxx'
 import { clsx } from 'clsx'
 
-const [css, styles, href] = cxx.tag<AsideClasses>('Aside')`
+const { styles } = cxx.extract.tag<AsideClasses>('Aside')`
   .aside {
     @media (width >= 720px) {
       inline-size: 170px;
@@ -60,10 +60,6 @@ export function Aside({ className, ...rest }: React.ComponentPropsWithRef<'aside
 					))}
 				</nav>
 			</aside>
-
-			<style href={href} precedence="default">
-				{css}
-			</style>
 		</>
 	)
 }

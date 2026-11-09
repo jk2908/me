@@ -1,7 +1,7 @@
 import { cxx, type WrapperClasses } from '@jk2908/cxx'
 import { clsx } from 'clsx'
 
-const [css, styles, href] = cxx.tag<WrapperClasses>('Wrapper')`
+const { styles } = cxx.extract.tag<WrapperClasses>('Wrapper')`
   :where(.wrapper) {
     inline-size: 100%;
     padding-block: var(--space-6x);
@@ -20,10 +20,6 @@ export function Wrapper({
 			<div className={clsx(styles.wrapper, className)} {...rest}>
 				{children}
 			</div>
-
-			<style href={href} precedence="default">
-				{css}
-			</style>
 		</>
 	)
 }

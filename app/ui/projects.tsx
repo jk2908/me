@@ -4,7 +4,7 @@ import { cxx, type ProjectsClasses } from '@jk2908/cxx'
 import { allProjects } from '@jk2908/mdsrc'
 import { clsx } from 'clsx'
 
-const [css, styles, href] = cxx.tag<ProjectsClasses>('Projects')`
+const { styles } = cxx.extract.tag<ProjectsClasses>('Projects')`
   .projects {
     display: flex;
     flex-direction: column;
@@ -107,10 +107,6 @@ export function Projects({ className, ...rest }: React.ComponentPropsWithRef<'ul
 			) : (
 				<p>Nothing is recent.</p>
 			)}
-
-			<style href={href} precedence="default">
-				{css}
-			</style>
 		</>
 	)
 }

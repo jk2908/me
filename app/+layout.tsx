@@ -1,13 +1,13 @@
 import type { RootLayoutClasses } from '@jk2908/cxx'
 
-import { cxx } from '@jk2908/cxx'
+import { cxx, Style } from '@jk2908/cxx'
 
 import './styles.css'
 import { Aside } from './ui/aside'
 import { Footer } from './ui/footer'
 import { Wrapper } from './ui/wrapper'
 
-const [css, styles, href] = cxx.tag<RootLayoutClasses>('RootLayout')`
+const { styles, styleProps } = cxx.embed.tag<RootLayoutClasses>('RootLayout')`
   .page {
     display: flex;
     flex-direction: column;
@@ -44,9 +44,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 					crossOrigin="anonymous"
 				/>
 
-				<style href={href} precedence="medium">
-					{css}
-				</style>
+				<Style {...styleProps} />
 			</head>
 
 			<body>
