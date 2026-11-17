@@ -1,7 +1,7 @@
-import { cxx, type WrapperClasses } from '@jk2908/cxx'
+import { cxx } from '@jk2908/cxx'
 import { clsx } from 'clsx'
 
-const { styles } = cxx.extract.tag<WrapperClasses>('Wrapper')`
+const { styles } = cxx.extract.tag('Wrapper')`
   :where(.wrapper) {
     inline-size: 100%;
     padding-block: var(--space-6x);

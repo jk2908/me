@@ -2,11 +2,11 @@ import { useMemo } from 'react'
 
 import type { Route, Solas } from '@jk2908/solas'
 import { abort } from '@jk2908/solas/navigation'
-import { cxx, type WritingSlugClasses } from '@jk2908/cxx'
+import { cxx } from '@jk2908/cxx'
 import { allPosts } from '@jk2908/mdsrc'
 import clsx from 'clsx'
 
-const [css, styles, href] = cxx.tag<WritingSlugClasses>('WritingSlug')`
+const { styles } = cxx.extract.tag('WritingSlug')`
 	.meta {
 		align-items: baseline;
 		display: flex;
@@ -79,10 +79,6 @@ export default function Page({ params }: Route.Props<Solas.Routes['/writing/:slu
 					className={styles.article}
 				/>
 			)}
-
-			<style href={href} precedence="default">
-				{css}
-			</style>
 		</>
 	)
 }

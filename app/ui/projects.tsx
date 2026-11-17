@@ -1,10 +1,10 @@
 'use client'
 
-import { cxx, type ProjectsClasses } from '@jk2908/cxx'
+import { cxx } from '@jk2908/cxx'
 import { allProjects } from '@jk2908/mdsrc'
 import { clsx } from 'clsx'
 
-const { styles } = cxx.extract.tag<ProjectsClasses>('Projects')`
+const { styles } = cxx.extract.tag('Projects')`
   .projects {
     display: flex;
     flex-direction: column;

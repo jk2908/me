@@ -1,6 +1,3 @@
-import { dirname, resolve } from 'node:path'
-import { fileURLToPath } from 'node:url'
-
 import { defineConfig } from 'vite'
 
 import solas from '@jk2908/solas'
@@ -8,8 +5,6 @@ import cloudflare from '@jk2908/solas/adapters/cloudflare'
 import cxx from '@jk2908/cxx/vite'
 import mdsrc from '@jk2908/mdsrc'
 import react from '@vitejs/plugin-react'
-
-const resolver = (p: string) => resolve(dirname(fileURLToPath(import.meta.url)), p)
 
 export default defineConfig(({ mode }) => {
 	return {
@@ -35,7 +30,6 @@ export default defineConfig(({ mode }) => {
 							},
 						}
 					: {}),
-
 				sitemap: {
 					// `__`-prefixed posts are private and are not routable
 					routes: routes => routes.filter(route => !route.includes('__')),
@@ -48,6 +42,12 @@ export default defineConfig(({ mode }) => {
 							href: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐲</text></svg>',
 						},
 					],
+				},
+				router: {
+					cache: {
+						// enable in dev too for testing
+						enabled: true,
+					},
 				},
 			}),
 			react(),
@@ -82,10 +82,5 @@ export default defineConfig(({ mode }) => {
 				],
 			}),
 		],
-		resolve: {
-			alias: {
-				'#': resolver('./'),
-			},
-		},
 	}
 })

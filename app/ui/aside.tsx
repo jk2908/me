@@ -1,8 +1,8 @@
 import { Link } from '@jk2908/solas/router'
-import { type AsideClasses, cxx } from '@jk2908/cxx'
+import { cxx } from '@jk2908/cxx'
 import { clsx } from 'clsx'
 
-const { styles } = cxx.extract.tag<AsideClasses>('Aside')`
+const { styles } = cxx.extract.tag('Aside')`
   .aside {
     @media (width >= 720px) {
       inline-size: 170px;
