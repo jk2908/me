@@ -134,7 +134,7 @@ a[rel*='external'] {
 	}
 }
 
-:focus-visible {
+:where(a, button, input, select, textarea, summary):focus-visible {
 	background-color: #ffff00;
 	outline: none;
 }
