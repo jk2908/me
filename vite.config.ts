@@ -46,7 +46,7 @@ export default defineConfig(({ mode }) => {
 				router: {
 					cache: {
 						// enable in dev too for testing
-						enabled: true,
+						mode: 'prerendered',
 					},
 				},
 			}),
